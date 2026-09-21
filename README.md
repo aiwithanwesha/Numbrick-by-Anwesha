@@ -13,7 +13,7 @@
 
 <br>
 
-<a href="https://aiwithanwesha.github.io/Numbrick/">
+<a href="[https://aiwithanwesha.github.io/Numbrick/](https://aiwithanwesha.github.io/Numbrick-by-Anwesha/)">
   <img src="https://img.shields.io/badge/🌐%20Visit%20Website-Numbrick-ff3fa4?style=for-the-badge" alt="Visit Website">
 </a>
 
