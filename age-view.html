@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Numbrick - Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Numbrick Logo" class="logo-img">
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <div class="menu-toggle" id="mobile-menu" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+            <button class="nav-btn" onclick="window.location.href='calc-view.html'">Calculator</button>
+            <button class="nav-btn" onclick="window.location.href='unit-view.html'">Unit Converter</button>
+            <button class="nav-btn" onclick="window.location.href='curr-view.html'">Currency Converter</button>
+            <button class="nav-btn" onclick="window.location.href='bmi-view.html'">BMI Calculator</button>
+            <button class="nav-btn active" onclick="window.location.href='age-view.html'">Age Calculator</button>
+        </nav>
+    </header>
+
+    <header class="age-dashboard">
+        <h1>Age Calculator</h1>
+    </header>
+
+    <div class="dashboard age-view-layout">
+        <div class="column">
+            <div class="panel">
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" id="birth-date">
+                </div>
+                <button class="submit-btn" onclick="calculateAge()">Calculate Age</button>
+                <div class="result-box" id="age-result">Age: --</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="signature">© 2026 Numbrick • Designed to Calculate • Crafted by Anwesha</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

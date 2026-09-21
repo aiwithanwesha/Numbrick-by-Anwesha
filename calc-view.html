@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Numbrick - Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Numbrick Logo" class="logo-img">
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <div class="menu-toggle" id="mobile-menu" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+            <button class="nav-btn active" onclick="window.location.href='calc-view.html'">Calculator</button>
+            <button class="nav-btn" onclick="window.location.href='unit-view.html'">Unit Converter</button>
+            <button class="nav-btn" onclick="window.location.href='curr-view.html'">Currency Converter</button>
+            <button class="nav-btn" onclick="window.location.href='bmi-view.html'">BMI Calculator</button>
+            <button class="nav-btn" onclick="window.location.href='age-view.html'">Age Calculator</button>
+        </nav>
+    </header>
+
+    <div class="calc-dashboard">
+        <h1>Calculator</h1>
+    </div>
+
+    <div class="dashboard dual-calc-layout">
+        <!-- Left Column: Standard Calculator -->
+        <div class="column">
+            <div class="panel">
+                <h3 class="calc-section-title">Standard Calculator</h3>
+                <div id="standard-view" class="calc-view active">
+                    <div class="display">
+                        <div class="history-preview" id="std-history"></div>
+                        <div class="current-input" id="std-display">0</div>
+                    </div>
+                    <div class="keypad">
+                        <button class="key action" onclick="clearDisplay()">AC</button>
+                        <button class="key operator" onclick="handleStdParentheses()">()</button>
+                        <button class="key operator" onclick="appendValue('%')">%</button>
+                        <button class="key operator" onclick="appendValue('÷')">÷</button>
+                        <button class="key" onclick="appendValue('7')">7</button>
+                        <button class="key" onclick="appendValue('8')">8</button>
+                        <button class="key" onclick="appendValue('9')">9</button>
+                        <button class="key operator" onclick="appendValue('×')">×</button>
+                        <button class="key" onclick="appendValue('4')">4</button>
+                        <button class="key" onclick="appendValue('5')">5</button>
+                        <button class="key" onclick="appendValue('6')">6</button>
+                        <button class="key operator" onclick="appendValue('-')">-</button>
+                        <button class="key" onclick="appendValue('1')">1</button>
+                        <button class="key" onclick="appendValue('2')">2</button>
+                        <button class="key" onclick="appendValue('3')">3</button>
+                        <button class="key operator" onclick="appendValue('+')">+</button>
+                        <button class="key" onclick="appendValue('0')">0</button>
+                        <button class="key" onclick="appendValue('.')">.</button>
+                        <button class="key action" onclick="deleteChar()">⌫</button>
+                        <button class="key equals" onclick="calculateResult()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Scientific Calculator -->
+        <div class="column">
+            <div class="panel">
+                <h3 class="calc-section-title">Scientific Calculator</h3>
+                <div id="scientific-view" class="calc-view active">
+                    <div class="display">
+                        <div class="history-preview" id="sci-history"></div>
+                        <div class="current-input" id="sci-display">0</div>
+                    </div>
+                    <div class="keypad scientific">
+                        <button class="key operator" id="btn-sqrt-sq" onclick="handleSqrtSquare()">√</button>
+                        <button class="key operator" onclick="sciAppend('π')">π</button>
+                        <button class="key operator" onclick="sciAppend('^')">^</button>
+                        <button class="key operator" onclick="sciFactorial()">!</button>
+                        
+                        <button class="key action" id="deg-rad-btn" onclick="toggleAngleMode()">Deg</button>
+                        <button class="key operator" id="btn-sin" onclick="handleTrig('sin')">sin</button>
+                        <button class="key operator" id="btn-cos" onclick="handleTrig('cos')">cos</button>
+                        <button class="key operator" id="btn-tan" onclick="handleTrig('tan')">tan</button>
+
+                        <button class="key action" id="inv-btn" onclick="toggleInverse()">Inv</button>
+                        <button class="key operator" onclick="sciAppend('e')">e</button>
+                        <button class="key operator" id="btn-ln-ex" onclick="handleLnEx()">ln</button>
+                        <button class="key operator" id="btn-log-10x" onclick="handleLog10x()">log</button>
+
+                        <button class="key action" onclick="sciClear()">AC</button>
+                        <button class="key operator" onclick="handleParentheses()">()</button>
+                        <button class="key operator" onclick="sciAppend('%')">%</button>
+                        <button class="key operator" onclick="sciAppend('÷')">÷</button>
+
+                        <button class="key" onclick="sciAppend('7')">7</button>
+                        <button class="key" onclick="sciAppend('8')">8</button>
+                        <button class="key" onclick="sciAppend('9')">9</button>
+                        <button class="key operator" onclick="sciAppend('×')">×</button>
+
+                        <button class="key" onclick="sciAppend('4')">4</button>
+                        <button class="key" onclick="sciAppend('5')">5</button>
+                        <button class="key" onclick="sciAppend('6')">6</button>
+                        <button class="key operator" onclick="sciAppend('-')">-</button>
+
+                        <button class="key" onclick="sciAppend('1')">1</button>
+                        <button class="key" onclick="sciAppend('2')">2</button>
+                        <button class="key" onclick="sciAppend('3')">3</button>
+                        <button class="key operator" onclick="sciAppend('+')">+</button>
+
+                        <button class="key" onclick="sciAppend('0')">0</button>
+                        <button class="key" onclick="sciAppend('.')">.</button>
+                        <button class="key action" onclick="sciDelete()">⌫</button>
+                        <button class="key equals" onclick="sciCalculate()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Full-Width History Panel -->
+        <div class="column full-width-history">
+            <div class="panel">
+                <h3>History <button class="clear-history-btn" onclick="clearHistory()">Clear History</button></h3>
+                <div class="history-list" id="history-container">
+                    <p style="color: var(--text-muted); text-align: center; font-size: 0.85rem;">No history yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="signature">© 2026 Numbrick • Designed to Calculate • Crafted by Anwesha</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

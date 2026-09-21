@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Numbrick - Smart Calculation Suite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Numbrick Logo" class="logo-img">
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <div class="menu-toggle" id="mobile-menu" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+            <button class="nav-btn" onclick="window.location.href='calc-view.html'">Calculator</button>
+            <button class="nav-btn" onclick="window.location.href='unit-view.html'">Unit Converter</button>
+            <button class="nav-btn" onclick="window.location.href='curr-view.html'">Currency Converter</button>
+            <button class="nav-btn" onclick="window.location.href='bmi-view.html'">BMI Calculator</button>
+            <button class="nav-btn" onclick="window.location.href='age-view.html'">Age Calculator</button>
+        </nav>
+    </header>
+
+    <!-- Modern Hero Section -->
+    <section class="modern-hero">
+        <div class="hero-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Built for Numbers, Designed for Simplicity </div>
+        <h1>Welcome to <span> Numbrick </span></h1>
+        <p>A powerful digital workspace for calculations, conversions, measurements, and everyday numerical solutions—all in one seamless experience. </p>
+    </section>
+
+    <!-- Interactive Tools Showcase Grid -->
+    <main class="showcase-container">
+        <h2 class="showcase-heading">Explore Our Tools</h2>
+        
+        <div class="modern-grid">
+            <div class="modern-card" onclick="window.location.href='calc-view.html'">
+                <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+                <h3>Calculator</h3>
+                <p>Advanced standard & scientific calculations at your fingertips.</p>
+                <span class="card-link">Calculate Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <div class="modern-card" onclick="window.location.href='unit-view.html'">
+                <div class="card-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                <h3>Unit Converter</h3>
+                <p>Convert length, weight, temperature, area and volume instantly.</p>
+                <span class="card-link">Converter Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <div class="modern-card" onclick="window.location.href='curr-view.html'">
+                <div class="card-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                <h3>Currency Converter</h3>
+                <p>Accurate live foreign exchange rates for global currencies.</p>
+                <span class="card-link">Converter Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <div class="modern-card" onclick="window.location.href='bmi-view.html'">
+                <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>BMI Calculator</h3>
+                <p>Monitor your body mass index and maintain a healthy lifestyle.</p>
+                <span class="card-link">Calculate Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <div class="modern-card" onclick="window.location.href='age-view.html'">
+                <div class="card-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <h3>Age Calculator</h3>
+                <p>Calculate precise age in years, months, and days effortlessly.</p>
+                <span class="card-link">Calculate Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Why Numbrick Section -->
+    <section class="landing-section">
+        <h3 class="section-title">Why Numbrick?</h3>
+        <p class="why-subtitle">Numbers are everywhere, and so are the everyday tasks that depend on them. From calculations and scientific operations to unit and currency conversions, BMI measurements, and age calculations, Numbrick brings essential tools together in one simple digital workspace. Built for convenience and ease of use, Numbrick helps you calculate, convert, measure, and solve everyday numerical tasks without unnecessary complexity.</p>
+        <div class="why-grid">
+            <div class="why-badge"><i class="fa-solid fa-calculator"></i> CALCULATE</div>
+            <div class="why-badge"><i class="fa-solid fa-arrows-rotate"></i> CONVERT</div>
+            <div class="why-badge"><i class="fa-solid fa-ruler"></i> MEASURE</div>
+            <div class="why-badge"><i class="fa-solid fa-lightbulb"></i> SOLVE</div>
+        </div>
+    </section>
+    
+    <footer class="signature">© 2026 Numbrick • Designed to Calculate • Crafted by Anwesha</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
