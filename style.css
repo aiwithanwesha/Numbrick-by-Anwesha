@@ -258,7 +258,7 @@ header p {
 .dashboard {
     display: grid;
     grid-template-columns: 1fr;
-    margin-top: 12rem;
+    margin-top: 3rem;
     gap: 20px;
     width: 100%;
     max-width: 1100px;
@@ -268,6 +268,7 @@ header p {
 @media (min-width: 900px) {
     .dashboard {
         grid-template-columns: 320px 420px 320px;
+        margin-top: 12rem; 
     }
 }
 
