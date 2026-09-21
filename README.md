@@ -2,7 +2,8 @@
 
 <img src="logo.png" alt="Numbrick Logo" width="180">
 
-<h1 align="center">Numbrick</h1>
+---
+<h1 align="left">🌌 Numbrick - Smart Calculation Suite</h1>
 
 <p align="center">
   <b><i>Calculate • Convert • Simplify.</i></b>
@@ -16,11 +17,6 @@
   <img src="https://img.shields.io/badge/🌐%20Visit%20Website-Numbrick-ff3fa4?style=for-the-badge" alt="Visit Website">
 </a>
 
-<br>
-
-<a href="YOUR_DEMO_VIDEO_LINK">
-  <img src="https://img.shields.io/badge/▶%20Watch%20Demo-Video-8b5cf6?style=for-the-badge" alt="Watch Demo">
-</a>
 
 </div>
 
@@ -164,8 +160,7 @@ The interface combines a dark space-inspired background with gradient accents, g
 ## 🗂️ Project Structure
 
 ```text
-Numbrick/
-│
+
 ├── index.html
 ├── calc-view.html
 ├── unit-view.html
